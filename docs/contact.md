@@ -12,10 +12,10 @@ Request Body :
 
 ```json
 {
-  "first_name": "Eko",
-  "last_name": "Khannedy",
-  "email": "eko@pzn.com",
-  "phone": "32423423434"
+  "first_name": "Tegar",
+  "last_name": "Satriya",
+  "email": "tegar@mail.com",
+  "phone": "08504678023"
 }
 ```
 
@@ -25,10 +25,10 @@ Response Body Success :
 {
   "data": {
     "id": 1,
-    "first_name": "Eko",
-    "last_name": "Khannedy",
-    "email": "eko@pzn.com",
-    "phone": "32423423434"
+    "first_name": "Tegar",
+    "last_name": "Satriya",
+    "email": "tegar@mail.com",
+    "phone": "08504678023"
   }
 }
 ```
@@ -53,10 +53,10 @@ Request Body :
 
 ```json
 {
-  "first_name": "Eko",
-  "last_name": "Khannedy",
-  "email": "eko@pzn.com",
-  "phone": "32423423434"
+  "first_name": "Tegar",
+  "last_name": "wiguna",
+  "email": "tegar@mail.com",
+  "phone": "08504678023"
 }
 ```
 
@@ -67,9 +67,9 @@ Response Body Success :
   "data": {
     "id": 1,
     "first_name": "Eko",
-    "last_name": "Khannedy",
-    "email": "eko@pzn.com",
-    "phone": "32423423434"
+    "last_name": "wiguna",
+    "email": "tegar@mail.com",
+    "phone": "08504678023"
   }
 }
 ```
@@ -96,10 +96,10 @@ Response Body Success :
 {
   "data": {
     "id": 1,
-    "first_name": "Eko",
-    "last_name": "Khannedy",
-    "email": "eko@pzn.com",
-    "phone": "32423423434"
+    "first_name": "Tegar",
+    "last_name": "Satriya",
+    "email": "tegar@mail.com",
+    "phone": "08504678023"
   }
 }
 ```
@@ -135,17 +135,17 @@ Response Body Success :
   "data": [
     {
       "id": 1,
-      "first_name": "Eko",
-      "last_name": "Khannedy",
-      "email": "eko@pzn.com",
-      "phone": "32423423434"
+      "first_name": "Tegar",
+      "last_name": "Satriya",
+      "email": "tegar@mail.com",
+      "phone": "08504678023"
     },
     {
       "id": 2,
-      "first_name": "Eko",
-      "last_name": "Khannedy",
-      "email": "eko@pzn.com",
-      "phone": "32423423434"
+      "first_name": "Tegar",
+      "last_name": "Satriya",
+      "email": "tegar@mail.com",
+      "phone": "08504678023"
     }
   ],
   "paging": {

@@ -2,12 +2,12 @@
   "name": "contact",
   "version": "1.0.0",
   "description": "This project is following youtube video from [ProgrammerZamanNow](https://www.youtube.com/watch?v=6v8JXecArqE) this project to learn about NODE.js, Prisma, PostgreSQL, etc",
-  "main": "index.js",
+  "main": "main.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest -i"
   },
   "jest": {
     "transform": {

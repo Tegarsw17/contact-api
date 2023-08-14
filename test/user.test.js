@@ -5,6 +5,8 @@ import { logger } from '../src/application/logging.js'
 import { createTestUser, getTestUser, removeTestUser } from './test-util.js'
 import bcrypt from 'bcrypt'
 
+global.console = require('console')
+
 describe('POST /api/users', function () {
   afterEach(async () => {
     await removeTestUser()

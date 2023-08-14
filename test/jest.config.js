@@ -1,0 +1,1 @@
+setupFilesAfterEnv: ['./config.js']

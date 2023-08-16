@@ -1,10 +1,13 @@
-import contactService from '../service/contact-service'
+import addressService from '../service/address-service'
 
 const create = async (req, res, next) => {
   try {
     const user = req.user
     const request = req.body
-    const result = await contactService.create(user, request)
+    const contactId = req.params.contactId
+
+    const result = await addressService.create(user, contactId, request)
+
     res.status(200).json({
       data: result,
     })
@@ -17,7 +20,10 @@ const get = async (req, res, next) => {
   try {
     const user = req.user
     const contactId = req.params.contactId
-    const result = await contactService.get(user, contactId)
+    const addressId = req.params.addressId
+
+    const result = await addressService.get(user, contactId, addressId)
+
     res.status(200).json({
       data: result,
     })
@@ -30,10 +36,11 @@ const update = async (req, res, next) => {
   try {
     const user = req.user
     const contactId = req.params.contactId
+    const addressId = req.params.addressId
     const request = req.body
-    request.id = contactId
+    request.id = addressId
 
-    const result = await contactService.update(user, request)
+    const result = await addressService.update(user, contactId, request)
 
     res.status(200).json({
       data: result,
@@ -47,8 +54,10 @@ const remove = async (req, res, next) => {
   try {
     const user = req.user
     const contactId = req.params.contactId
+    const addressId = req.params.addressId
 
-    await contactService.remove(user, contactId)
+    const result = await addressService.remove(user, contactId, addressId)
+
     res.status(200).json({
       data: 'OK',
     })
@@ -57,26 +66,19 @@ const remove = async (req, res, next) => {
   }
 }
 
-const search = async (req, res, next) => {
+const list = async (req, res, next) => {
   try {
     const user = req.user
-    const request = {
-      name: req.query.name,
-      email: req.query.email,
-      phone: req.query.phone,
-      page: req.query.page,
-      size: req.query.size,
-    }
+    const contactId = req.params.contactId
 
-    const result = await contactService.search(user, request)
+    const result = await addressService.list(user, contactId)
 
     res.status(200).json({
-      data: result.data,
-      paging: result.paging,
+      data: result,
     })
   } catch (e) {
     next(e)
   }
 }
 
-export default { create, get, update, remove, search }
+export default { create, get, update, remove, list }
